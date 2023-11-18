@@ -19,28 +19,28 @@
 <div id="app"></div>
   
 <script>
-    window.$docsify = {
-      name: 'GLADIATORS',
-      repo: '',
-
-      loadSidebar: true, //prepare for sidebar
-      loadNavbar: true, //prepare for navbar
-      mergeNavbar: true,
-
-      executeScript: true,
-      homepage: 'home.md',
-      search: 'auto', // default
-
-      // complete configuration parameters
-      search: {
-        maxAge: 86400000, // Expiration time, the default one day
-        paths: 'auto',
-        placeholder: 'Search',
-        noData: 'No Results!',
-        // Headline depth, 1 - 6
-        depth: 6,
-        hideOtherSidebarContent: false, // whether or not to hide other sidebar content
-     },
+      // Docsify configuration
+      window.$docsify = {
+        alias: {
+          '.*?/awesome':
+            'https://raw.githubusercontent.com/docsifyjs/awesome-docsify/main/README.md',
+          '.*?/changelog':
+            'https://raw.githubusercontent.com/docsifyjs/docsify/main/CHANGELOG.md',
+          '/.*/_navbar.md': '/_navbar.md',
+        },
+        auto2top: true,
+        coverpage: true,
+        executeScript: true,
+        loadSidebar: true,
+        loadNavbar: true,
+        mergeNavbar: true,
+        maxLevel: 4,
+        subMaxLevel: 2,
+        ga: 'UA-106147152-1',
+        matomo: {
+          host: '//matomo.thunderwave.de',
+          id: 6,
+        },
 
      copyCode: {
     buttonText: {
